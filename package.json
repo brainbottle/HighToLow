@@ -1,0 +1,23 @@
+{
+  "name": "high-low-assignment",
+  "version": "1.0.0",
+  "description": "# High Low Card Game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/technical-training-e-to-o/high-low-assignment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/technical-training-e-to-o/high-low-assignment/issues"
+  },
+  "homepage": "https://github.com/technical-training-e-to-o/high-low-assignment#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
