@@ -20,11 +20,24 @@ function getInput(prompt) {
 // HINT: The result of step 6 is that each card will be an object inside of the deck array, for example [{suit: "diamonds", rank: "A", value: 0}, {suit: "diamonds", rank: "2", value: 1},...{etc}]. For example, if we wanted to organize the players and teams of the NBA with index numbers, we could write: nba.push({player: players[i], team: teams[n], index: i})
 // 7. After your loops, return deck, which should now return an array full of card objects if you were to run buildDeck().
 
-function buildDeck() {
+function buildDeck() 
+{
   const suits = ['spades', 'hearts', 'diamonds', 'clubs'];
   const ranks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
-
+  const deck = [""];
+  for(i = 0; i < ranks.length; i++)
+  {
+    for(x = 0; x < suits.length; x++)
+    {
+      var card = {Ranks: ranks[i], Suits: suits[x]};
+      deck.push(card);
+    }
+  }
+  
+  return deck;
 }
+
+buildDeck();
 
 
 
@@ -43,6 +56,25 @@ function buildDeck() {
   // 11. Finally, close the while loop and return "shuffledDeck". 
   // 12. Test it out! Add "console.log(shuffle(buildDeck()))" to a line AFTER the function, then run this file in Node; you should see your shuffled deck of cards.
 
+  function shuffle(deck)
+{
+  var shuffledDeck = deck;
+  let currentIndex = deck.length;
+  let temporaryValue = null;
+  let randomIndex = null;
+
+  while (currentIndex != 0){
+  randomIndex = Math.floor(Math.random() * currentIndex);
+  currentIndex--;
+  temporaryValue = shuffledDeck[currentIndex];
+  
+  shuffledDeck[currentIndex] = shuffledDeck[randomIndex];
+  shuffledDeck[randomIndex] = temporaryValue;
+  }
+  return shuffledDeck;
+}
+
+console.log(shuffle(buildDeck()));
 
   // STEP THREE - Greeting the player
   // 1. Declare a function called greet()
